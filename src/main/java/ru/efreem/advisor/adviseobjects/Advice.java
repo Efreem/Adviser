@@ -54,6 +54,7 @@ public class Advice {
     }
 
     public void generateAdvice(List<Article> articles, List<Collection> collections, List<Test> tests, String type) {
+        int ptr = 0;
 
         if (type == "article") {
 
@@ -64,24 +65,19 @@ public class Advice {
             if (size() != 8) {
 
                 while (size() != MAXIMUM_ADVICE_SIZE) {
-
-                    for (Test test : tests) {
-                        testAdviceList.add(test);
-                        break;
-                    }
-
+                    testAdviceList.add(tests.get(ptr));
+                    ptr++;
                 }
+
+                ptr = 0;
 
                 if (size() != MAXIMUM_ADVICE_SIZE) {
 
                     while (size() != 8) {
-
-                        for (Collection collection : collections) {
-                            collectionAdviceList.add(collection);
-                            break;
-                        }
-
+                        collectionAdviceList.add(collections.get(ptr));
+                        ptr++;
                     }
+
                 }
             }
         }
@@ -95,23 +91,17 @@ public class Advice {
             if (size() != 8) {
 
                 while (size() != MAXIMUM_ADVICE_SIZE) {
-
-                    for (Article article : articles) {
-                        articleAdviceList.add(article);
-                        break;
-                    }
-
+                    articleAdviceList.add(articles.get(ptr));
+                    ptr++
                 }
+
+                ptr = 0;
 
                 if (size() != MAXIMUM_ADVICE_SIZE) {
 
                     while (size() != 8) {
-
-                        for (Collection collection : collections) {
-                            collectionAdviceList.add(collection);
-                            break;
-                        }
-
+                        collectionAdviceList.add(collections.get(ptr));
+                        ptr++;
                     }
                 }
             }
@@ -125,23 +115,17 @@ public class Advice {
             if (size() != 8) {
 
                 while (size() != MAXIMUM_ADVICE_SIZE) {
-
-                    for (Article article : articles) {
-                        articleAdviceList.add(article);
-                        break;
-                    }
-
+                    articleAdviceList.add(articles.get(ptr));
+                    ptr++
                 }
+
+                ptr = 0;
 
                 if (size() != MAXIMUM_ADVICE_SIZE) {
 
                     while (size() != 8) {
-
-                        for (Test test : tests) {
-                            testAdviceList.add(test);
-                            break;
-                        }
-
+                        testAdviceList.add(tests.get(ptr);
+                        ptr++;
                     }
                 }
             }

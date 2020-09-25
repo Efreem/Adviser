@@ -17,7 +17,6 @@ import ru.efreem.advisor.repos.TestRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/getAdviseList")
 public class AdviceController {
     @Autowired
     private ArticleRepository articleRepo;
