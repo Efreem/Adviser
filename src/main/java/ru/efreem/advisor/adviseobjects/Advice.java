@@ -91,8 +91,7 @@ public class Advice {
             if (size() != 8) {
 
                 while (size() != MAXIMUM_ADVICE_SIZE) {
-                    articleAdviceList.add(articles.get(ptr));
-                    ptr++;
+
                 }
 
                 ptr = 0;
