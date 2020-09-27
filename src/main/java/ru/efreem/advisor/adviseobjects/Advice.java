@@ -6,6 +6,7 @@ import ru.efreem.advisor.models.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Advice {
     private List<Article> articleAdviceList;
