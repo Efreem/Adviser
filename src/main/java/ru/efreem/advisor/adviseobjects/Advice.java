@@ -92,7 +92,7 @@ public class Advice {
 
                 while (size() != MAXIMUM_ADVICE_SIZE) {
                     articleAdviceList.add(articles.get(ptr));
-                    ptr++
+                    ptr++;
                 }
 
                 ptr = 0;
@@ -116,7 +116,7 @@ public class Advice {
 
                 while (size() != MAXIMUM_ADVICE_SIZE) {
                     articleAdviceList.add(articles.get(ptr));
-                    ptr++
+                    ptr++;
                 }
 
                 ptr = 0;
@@ -124,7 +124,7 @@ public class Advice {
                 if (size() != MAXIMUM_ADVICE_SIZE) {
 
                     while (size() != 8) {
-                        testAdviceList.add(tests.get(ptr);
+                        testAdviceList.add(tests.get(ptr));
                         ptr++;
                     }
                 }

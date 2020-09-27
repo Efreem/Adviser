@@ -32,10 +32,11 @@ public class AdviceController {
         Article article;
         Collection collection;
         Test test;
+        String[] tagsArray = tags.split(",");
 
-        List<Article> articlePreRecommendations = articleRepo.getPrerecommendationForArticles(tags.split(","));
-        List<Collection> collectionPreRecommendations = collectionRepo.getPrerecommendationForCollections(tags.split(","));
-        List<Test> testPreRecommendations = testRepo.getPrerecommendationForTests(tags.split(","));
+        List<Article> articlePreRecommendations = articleRepo.getPrerecommendationForArticles(tagsArray[0], tagsArray[1], tagsArray[2]);
+        List<Collection> collectionPreRecommendations = collectionRepo.getPrerecommendationForCollections(tagsArray[0], tagsArray[1], tagsArray[2]);
+        List<Test> testPreRecommendations = testRepo.getPrerecommendationForTests(tagsArray[0], tagsArray[1], tagsArray[2]);
 
         List<Article> articleRecommendations;
         List<Collection> collectionRecommendations;
