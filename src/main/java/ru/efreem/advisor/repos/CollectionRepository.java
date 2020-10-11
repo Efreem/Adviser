@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface CollectionRepository extends CrudRepository<Collection,Long> {
-    @Query("SELECT * FROM Collection collections WHERE ((collections.tag1 IN (?1,?2,?3)) OR (collections.tag2 IN (?1,?2,?3)) OR (collections.tag3 IN (?1,?2,?3))) AND id<>?4 GROUP BY views DESC")
+    @Query("SELECT collections FROM Collection collections WHERE ((collections.tag1 IN (?1,?2,?3)) OR (collections.tag2 IN (?1,?2,?3)) OR (collections.tag3 IN (?1,?2,?3))) AND id<>?4 GROUP BY views DESC")
     List<Collection> getPrerecommendationForCollections(String tag1, String tag2, String tag3, Long id);
 }
