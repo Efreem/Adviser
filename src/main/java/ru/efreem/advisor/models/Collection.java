@@ -16,9 +16,9 @@ public class Collection {
     private String tag2;
     private String tag3;
 
-    @ManyToOne
+    @OneToMany
     private Set<Article> articleSet;
-    @ManyToOne
+    @OneToMany
     private Set<Test> testSet;
 
     private Integer views;
